@@ -1,0 +1,167 @@
+/*MOBILE FIRST*/
+/*Estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/*Smartphone*/
+body {
+    width: 100%;
+    height: 100vh ;
+    color:#34495e 
+ }
+.border {
+    border: solid 1px #000;
+    background-color: yellow;
+}  
+  /*Grids por areas*/
+  #gridAreas {
+    display: grid;
+    /*estructura*/
+    grid-template-areas: 
+   "cabeza" /*fila 1 */
+   "menu"
+  "productos" /*fila 2*/
+  "brazo"
+  "servicios "/*fila 3*/
+   "pie"/*fila 4*/ 
+   ;
+   grid-template-rows: 100px 1fr 1fr 75px;
+   grid-template-columns: 100%;
+   grid-column-gap: 10px ;
+   grid-row-gap:  5px;
+}   
+/* Nombrar cada area*/
+header {
+    grid-area: cabeza;
+    padding: 10px;
+}
+footer {
+    grid-area: pie;
+    padding: 10px;
+}
+#productos {
+    grid-area: productos;
+    padding: 10px;
+}
+#servicios {
+grid-area: servicios;
+padding: 10px;
+}
+nav {
+    grid-area: menu;
+    padding: 10px;
+}
+aside {
+    grid-area: brazo;
+    padding: 10px;
+}
+/*item de menu*/
+span {
+    background-color: white;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+/*articulos de galeria*/
+article {
+    background-color: white;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem ;
+    padding: 10px;
+}  
+article h3 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+/*Flex*/
+span:hover {
+background-color: green;
+color: white;
+}
+  /*flex*/
+  .flexMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.productosFlex {
+    display: flex;
+    flex-flow: row wrap;
+}
+ /*Grids por areas*/
+ #gridAreas {
+    display: grid;
+    /*estructura*/
+    grid-template-areas: 
+   "menu cabeza cabeza " /*fila 1 */
+  "menu productos brazo" /*fila 2*/
+  "menu servicios brazo "/*fila 3*/
+   "menu pie pie"/*fila 4*/ 
+   ;
+   grid-template-rows: 100px 1fr 1fr 75px;
+   grid-template-columns: 15% auto 15%;
+   grid-column-gap: 10px ;
+   grid-row-gap:  5px;
+}
+/*Tablets*/
+@media (min-width:480px)and (max-width: 1023px) {
+     /*Grids por areas*/
+ #gridAreas {
+    display: grid;
+    /*estructura*/
+    grid-template-areas: 
+   "menu cabeza cabeza " /*fila 1 */
+  "menu productos brazo" /*fila 2*/
+  "menu servicios brazo "/*fila 3*/
+   "menu pie pie"/*fila 4*/ 
+   ;
+   grid-template-rows: 100px 1fr 1fr 75px;
+   grid-template-columns: 15% auto 15%;
+   grid-column-gap: 10px ;
+   grid-row-gap:  5px;
+}   
+}
+
+
+/*Desktop*/
+@media (min-width:1024px) {
+    
+    
+    body {
+       width: 100%;
+       height: 100vh ;
+       color:#34495e 
+    }
+    span {
+        background-color: white;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+    span:hover {
+    background-color: green;
+    color: white;
+    }
+    article {
+        background-color: white;
+        border-radius: 4px;
+        margin: 5px;
+        text-align: center;
+        font-size: 0.75rem ;
+        padding: 10px;
+    }
+    
+    /*flex*/
+    .flexMenu {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .productosFlex {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
